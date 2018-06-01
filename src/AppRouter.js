@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import PlacesToGo from './PlacesToGo';
-import PlacesCompleted from './PlacesCompleted';
-import Header from './Header';
+import PlacesToGo from './components/PlacesToGo';
+import PlacesCompleted from './components/PlacesCompleted';
+import Header from './components/Header';
 
 const AppRouter = () => (
     <BrowserRouter>

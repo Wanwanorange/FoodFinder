@@ -1,24 +1,19 @@
 import React, {Component} from 'react';
 
 export default class AddPlace extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: undefined
-        };
-    }
-
-
+    state = {
+        error: undefined
+    };
 
     onInputChange = (e) => {
         e.preventDefault();
         const input = e.target.elements;
-        const error = this.props.checkForErrors(input.name.value);
+        const error = this.props.checkForErrors(input);
 
-        this.setState(() => ({ error }));
+        this.setState({ error });
+
 
         if (!error) {
-            this.props.handleAddPlace(input.name.value, input.type.value);
             e.target.elements.name.value = '';
         }
     }
