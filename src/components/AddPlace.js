@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class AddPlace extends Component {
+class AddPlace extends Component {
     state = {
         error: undefined
     };
@@ -38,4 +38,4 @@ export default class AddPlace extends Component {
     }
 };
 
-
+export default AddPlace;

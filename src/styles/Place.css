@@ -1,0 +1,10 @@
+.place {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.place button {
+    height: 100%;
+}

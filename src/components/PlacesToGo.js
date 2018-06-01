@@ -9,7 +9,7 @@ class PlacesToGo extends Component {
     };
 
     handleAddPlace = (name, type = 'fast food') => {
-        const newPlace = <Place name={name} type={type} key={name}/>;
+        const newPlace = <Place name={name} type={type} key={name} removePlace={this.removePlace}/>;
         this.setState({places: [...this.state.places, newPlace]}, (() => {}));
     }
 
@@ -23,6 +23,10 @@ class PlacesToGo extends Component {
         this.handleAddPlace(name, input.type.value);
     }
 
+    removePlace = (placeToRemove) => {
+        this.setState({ places: this.state.places.filter((place) => ( placeToRemove !== place.key )) }, () => {});
+    }
+
     render() {
         return (
             <div className="PlacesToGo">
@@ -31,7 +35,6 @@ class PlacesToGo extends Component {
                 <ul>
                     {this.state.places}
                 </ul>
-
             </div>
         );
     }
