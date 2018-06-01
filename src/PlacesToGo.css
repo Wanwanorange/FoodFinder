@@ -1,0 +1,9 @@
+.PlacesToGo form {
+  padding: 0px 20px 0px 20px;
+  text-align: center;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
