@@ -1,43 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../styles/PlacesToGo.css';
 import AddPlace from './AddPlace';
-import Place from './Place';
+import PlacesList from './PlacesList';
 
-class PlacesToGo extends Component {
-    state = {
-        places: []
-    };
+const PlacesToGo = () => (
+    <div className="PlacesToGo">
+        <AddPlace/>
+        <PlacesList/>
+    </div>
+);
 
-    handleAddPlace = (name, type = 'fast food') => {
-        const newPlace = <Place name={name} type={type} key={name} removePlace={this.removePlace}/>;
-        this.setState({places: [...this.state.places, newPlace]}, (() => {}));
-    }
-
-    checkForErrors = (input) => {
-        const name = input.name.value;
-        if (!name) {
-            return 'Please enter place name';
-        } else if (this.state.places.findIndex(place => place.key === name ) > -1) {
-            return 'This place is already on your list';
-        }
-        this.handleAddPlace(name, input.type.value);
-    }
-
-    removePlace = (placeToRemove) => {
-        this.setState({ places: this.state.places.filter((place) => ( placeToRemove !== place.key )) }, () => {});
-    }
-
-    render() {
-        return (
-            <div className="PlacesToGo">
-                <AddPlace
-                    checkForErrors={this.checkForErrors}/>
-                <ul>
-                    {this.state.places}
-                </ul>
-            </div>
-        );
-    }
-}
 
 export default PlacesToGo;

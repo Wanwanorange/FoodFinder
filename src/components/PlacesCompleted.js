@@ -5,7 +5,7 @@ class PlacesCompleted extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            completedPlaces: [<Place name="Jenis Ice Cream" type="cafe"/>]
+            completedPlaces: [<Place name="Jenis Ice Cream" category="cafe"/>]
         };
     }
 

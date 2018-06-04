@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const addPlace = (place) => ({
     type: 'ADD_PLACE',

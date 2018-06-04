@@ -8,7 +8,7 @@ export default (state = defaultPlaceState, action) => {
                 action.place
             ];
         case 'REMOVE_PLACE':
-            return state.filter(({ id }) => id != action.id );
+            return state.filter(({ id }) => id !== action.id );
         default:
             return state;
     }

@@ -1,14 +1,38 @@
 import React, {Component} from 'react';
+import { addPlace } from "../actions/place-actions";
+import { connect } from 'react-redux';
+import selectPlaces from '../selectors/place-selector';
 
-class AddPlace extends Component {
+export class AddPlace extends Component {
     state = {
+        id: this.props.name,
+        name: this.props.name,
+        category: this.props.category,
+        completed: false,
         error: undefined
     };
+
+    checkForErrors = (input) => {
+        const name = input.name.value;
+        if (!name) {
+            return 'Please enter place name';
+        }
+        else if (this.props.places.findIndex(place => place.key === name ) > -1) {
+            return 'This place is already on your list';
+        }
+        const place = {
+            id: name,
+            name: name,
+            category: input.category.value,
+            completed: false
+        };
+        this.props.addPlace(place);
+    }
 
     onInputChange = (e) => {
         e.preventDefault();
         const input = e.target.elements;
-        const error = this.props.checkForErrors(input);
+        const error = this.checkForErrors(input);
 
         this.setState({ error });
 
@@ -23,7 +47,7 @@ class AddPlace extends Component {
             <div>
                 <form onSubmit={this.onInputChange}>
                     <input type="text" name="name"/>
-                    <select name="type">
+                    <select name="category">
                         <option value="bakery">Bakery</option>
                         <option value="cafe">Cafe</option>
                         <option value="meal delivery">Meal delivery</option>
@@ -38,4 +62,14 @@ class AddPlace extends Component {
     }
 };
 
-export default AddPlace;
+const mapStateToProps = (state) => {
+    return {
+        places: selectPlaces(state.places)
+    };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+    addPlace: (place) => dispatch(addPlace(place))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddPlace);
