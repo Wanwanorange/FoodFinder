@@ -5,10 +5,6 @@ import selectPlaces from '../selectors/place-selector';
 
 export class AddPlace extends Component {
     state = {
-        id: this.props.name,
-        name: this.props.name,
-        category: this.props.category,
-        completed: false,
         error: undefined
     };
 
@@ -17,7 +13,7 @@ export class AddPlace extends Component {
         if (!name) {
             return 'Please enter place name';
         }
-        else if (this.props.places.findIndex(place => place.key === name ) > -1) {
+        else if (this.props.places.findIndex(place => place.id === name ) > -1) {
             return 'This place is already on your list';
         }
         const place = {
