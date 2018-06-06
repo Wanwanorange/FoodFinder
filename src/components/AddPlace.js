@@ -1,49 +1,62 @@
 import React, {Component} from 'react';
-import { addPlace } from "../actions/place-actions";
-import { connect } from 'react-redux';
+import {addPlace} from "../actions/place-actions";
+import {connect} from 'react-redux';
 import selectPlaces from '../selectors/place-selector';
 
 export class AddPlace extends Component {
     state = {
-        error: undefined
+        id: '',
+        name: '',
+        category: 'bakery',
+        completed: false,
+        error: ''
     };
 
-    checkForErrors = (input) => {
-        const name = input.name.value;
+    addPlaceIfNoErrors = (input) => {
+        const name = input.name;
         if (!name) {
             return 'Please enter place name';
         }
-        else if (this.props.places.findIndex(place => place.id === name ) > -1) {
+        else if (this.props.places.findIndex(place => place.name === name) > -1) {
             return 'This place is already on your list';
         }
-        const place = {
-            id: name,
-            name: name,
-            category: input.category.value,
-            completed: false
-        };
-        this.props.addPlace(place);
-    }
+        this.props.addPlace({
+            id: this.state.id,
+            name: this.state.name,
+            category: this.state.category,
+            completed: this.state.completed
+        });
+        return '';
+    };
 
-    onInputChange = (e) => {
+    onSubmit = (e) => {
         e.preventDefault();
-        const input = e.target.elements;
-        const error = this.checkForErrors(input);
+        const error = this.addPlaceIfNoErrors(this.state);
 
-        this.setState({ error });
-
+        this.setState({error});
 
         if (!error) {
-            e.target.elements.name.value = '';
+            document.getElementsByName('name').value = '';
         }
-    }
+    };
+
+    onNameChange = (e) => {
+        const name = e.target.value;
+        this.setState(() => ({ id: name, name }));
+    };
+
+    onCategoryChange = (e) => {
+        const category = e.target.value;
+        this.setState(() => ({ category }));
+    };
 
     render() {
         return (
             <div>
-                <form onSubmit={this.onInputChange}>
-                    <input type="text" name="name"/>
-                    <select name="category">
+                <form onSubmit={this.onSubmit} >
+                    <input type="text" name="name" onChange={this.onNameChange}/>
+                    <select name="category"
+                            onChange={this.onCategoryChange}>
                         <option value="bakery">Bakery</option>
                         <option value="cafe">Cafe</option>
                         <option value="meal delivery">Meal delivery</option>

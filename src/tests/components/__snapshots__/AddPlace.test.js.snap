@@ -1,0 +1,493 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddPlace correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddPlace
+    addPlace={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <form
+          onSubmit={[Function]}
+>
+          <input
+                    name="name"
+                    onChange={[Function]}
+                    type="text"
+          />
+          <select
+                    name="category"
+                    onChange={[Function]}
+          >
+                    <option
+                              value="bakery"
+                    >
+                              Bakery
+                    </option>
+                    <option
+                              value="cafe"
+                    >
+                              Cafe
+                    </option>
+                    <option
+                              value="meal delivery"
+                    >
+                              Meal delivery
+                    </option>
+                    <option
+                              value="meal takeaway"
+                    >
+                              Meal Takeaway
+                    </option>
+                    <option
+                              value="restaurant"
+                    >
+                              Restaurant
+                    </option>
+          </select>
+          <button>
+                    Add Place
+          </button>
+</form>,
+        "",
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              name="name"
+              onChange={[Function]}
+              type="text"
+/>,
+            <select
+              name="category"
+              onChange={[Function]}
+>
+              <option
+                            value="bakery"
+              >
+                            Bakery
+              </option>
+              <option
+                            value="cafe"
+              >
+                            Cafe
+              </option>
+              <option
+                            value="meal delivery"
+              >
+                            Meal delivery
+              </option>
+              <option
+                            value="meal takeaway"
+              >
+                            Meal Takeaway
+              </option>
+              <option
+                            value="restaurant"
+              >
+                            Restaurant
+              </option>
+</select>,
+            <button>
+              Add Place
+</button>,
+          ],
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "name",
+              "onChange": [Function],
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <option
+                  value="bakery"
+>
+                  Bakery
+</option>,
+                <option
+                  value="cafe"
+>
+                  Cafe
+</option>,
+                <option
+                  value="meal delivery"
+>
+                  Meal delivery
+</option>,
+                <option
+                  value="meal takeaway"
+>
+                  Meal Takeaway
+</option>,
+                <option
+                  value="restaurant"
+>
+                  Restaurant
+</option>,
+              ],
+              "name": "category",
+              "onChange": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Bakery",
+                  "value": "bakery",
+                },
+                "ref": null,
+                "rendered": "Bakery",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Cafe",
+                  "value": "cafe",
+                },
+                "ref": null,
+                "rendered": "Cafe",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Meal delivery",
+                  "value": "meal delivery",
+                },
+                "ref": null,
+                "rendered": "Meal delivery",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Meal Takeaway",
+                  "value": "meal takeaway",
+                },
+                "ref": null,
+                "rendered": "Meal Takeaway",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Restaurant",
+                  "value": "restaurant",
+                },
+                "ref": null,
+                "rendered": "Restaurant",
+                "type": "option",
+              },
+            ],
+            "type": "select",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add Place",
+            },
+            "ref": null,
+            "rendered": "Add Place",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+      "",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <form
+            onSubmit={[Function]}
+>
+            <input
+                        name="name"
+                        onChange={[Function]}
+                        type="text"
+            />
+            <select
+                        name="category"
+                        onChange={[Function]}
+            >
+                        <option
+                                    value="bakery"
+                        >
+                                    Bakery
+                        </option>
+                        <option
+                                    value="cafe"
+                        >
+                                    Cafe
+                        </option>
+                        <option
+                                    value="meal delivery"
+                        >
+                                    Meal delivery
+                        </option>
+                        <option
+                                    value="meal takeaway"
+                        >
+                                    Meal Takeaway
+                        </option>
+                        <option
+                                    value="restaurant"
+                        >
+                                    Restaurant
+                        </option>
+            </select>
+            <button>
+                        Add Place
+            </button>
+</form>,
+          "",
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                name="name"
+                onChange={[Function]}
+                type="text"
+/>,
+              <select
+                name="category"
+                onChange={[Function]}
+>
+                <option
+                                value="bakery"
+                >
+                                Bakery
+                </option>
+                <option
+                                value="cafe"
+                >
+                                Cafe
+                </option>
+                <option
+                                value="meal delivery"
+                >
+                                Meal delivery
+                </option>
+                <option
+                                value="meal takeaway"
+                >
+                                Meal Takeaway
+                </option>
+                <option
+                                value="restaurant"
+                >
+                                Restaurant
+                </option>
+</select>,
+              <button>
+                Add Place
+</button>,
+            ],
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "name",
+                "onChange": [Function],
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <option
+                    value="bakery"
+>
+                    Bakery
+</option>,
+                  <option
+                    value="cafe"
+>
+                    Cafe
+</option>,
+                  <option
+                    value="meal delivery"
+>
+                    Meal delivery
+</option>,
+                  <option
+                    value="meal takeaway"
+>
+                    Meal Takeaway
+</option>,
+                  <option
+                    value="restaurant"
+>
+                    Restaurant
+</option>,
+                ],
+                "name": "category",
+                "onChange": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Bakery",
+                    "value": "bakery",
+                  },
+                  "ref": null,
+                  "rendered": "Bakery",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Cafe",
+                    "value": "cafe",
+                  },
+                  "ref": null,
+                  "rendered": "Cafe",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Meal delivery",
+                    "value": "meal delivery",
+                  },
+                  "ref": null,
+                  "rendered": "Meal delivery",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Meal Takeaway",
+                    "value": "meal takeaway",
+                  },
+                  "ref": null,
+                  "rendered": "Meal Takeaway",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Restaurant",
+                    "value": "restaurant",
+                  },
+                  "ref": null,
+                  "rendered": "Restaurant",
+                  "type": "option",
+                },
+              ],
+              "type": "select",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add Place",
+              },
+              "ref": null,
+              "rendered": "Add Place",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+        "",
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
