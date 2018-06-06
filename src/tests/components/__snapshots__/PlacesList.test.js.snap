@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PlacesList with list of places 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    places={
+        Array [
+            Object {
+              "category": "meal delivery",
+              "completed": false,
+              "id": "1234",
+              "name": "Big Mamas",
+            },
+            Object {
+              "category": "cafe",
+              "completed": true,
+              "id": "2903",
+              "name": "Kanga Wanga",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Place
+          category="meal delivery"
+          completed={false}
+          id="1234"
+          name="Big Mamas"
+          removePlace={undefined}
+/>,
+        <Place
+          category="cafe"
+          completed={true}
+          id="2903"
+          name="Kanga Wanga"
+          removePlace={undefined}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "category": "meal delivery",
+          "completed": false,
+          "id": "1234",
+          "name": "Big Mamas",
+          "removePlace": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "category": "cafe",
+          "completed": true,
+          "id": "2903",
+          "name": "Kanga Wanga",
+          "removePlace": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Place
+            category="meal delivery"
+            completed={false}
+            id="1234"
+            name="Big Mamas"
+            removePlace={undefined}
+/>,
+          <Place
+            category="cafe"
+            completed={true}
+            id="2903"
+            name="Kanga Wanga"
+            removePlace={undefined}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "category": "meal delivery",
+            "completed": false,
+            "id": "1234",
+            "name": "Big Mamas",
+            "removePlace": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "category": "cafe",
+            "completed": true,
+            "id": "2903",
+            "name": "Kanga Wanga",
+            "removePlace": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
