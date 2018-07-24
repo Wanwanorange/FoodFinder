@@ -1,10 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PlacesCompleted } from '../../components/PlacesCompleted';
-import Place from '../../components/Place';
-import places from '../testData/places';
+import PlacesCompleted from '../../components/PlacesCompleted';
 
 test('should render PlacesCompleted correctly', () => {
-    const wrapper = shallow(<PlacesCompleted places={places}/>);
+    const wrapper = shallow(<PlacesCompleted/>);
     expect(wrapper).toMatchSnapshot();
 });

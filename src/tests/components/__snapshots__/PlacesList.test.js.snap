@@ -37,7 +37,6 @@ ShallowWrapper {
       "children": Array [
         <Place
           category="meal delivery"
-          completePlace={undefined}
           completed={false}
           id="1234"
           name="Big Mamas"
@@ -45,7 +44,6 @@ ShallowWrapper {
 />,
         <Place
           category="cafe"
-          completePlace={undefined}
           completed={true}
           id="2903"
           name="Kanga Wanga"
@@ -61,7 +59,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "category": "meal delivery",
-          "completePlace": undefined,
           "completed": false,
           "id": "1234",
           "name": "Big Mamas",
@@ -77,7 +74,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "category": "cafe",
-          "completePlace": undefined,
           "completed": true,
           "id": "2903",
           "name": "Kanga Wanga",
@@ -99,7 +95,6 @@ ShallowWrapper {
         "children": Array [
           <Place
             category="meal delivery"
-            completePlace={undefined}
             completed={false}
             id="1234"
             name="Big Mamas"
@@ -107,7 +102,6 @@ ShallowWrapper {
 />,
           <Place
             category="cafe"
-            completePlace={undefined}
             completed={true}
             id="2903"
             name="Kanga Wanga"
@@ -123,7 +117,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "category": "meal delivery",
-            "completePlace": undefined,
             "completed": false,
             "id": "1234",
             "name": "Big Mamas",
@@ -139,7 +132,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "category": "cafe",
-            "completePlace": undefined,
             "completed": true,
             "id": "2903",
             "name": "Kanga Wanga",

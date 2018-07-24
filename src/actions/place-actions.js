@@ -8,8 +8,3 @@ export const removePlace = ({ id } = {}) => ({
     type: 'REMOVE_PLACE',
     id
 });
-
-export const completePlace = ({ id } = {}) => ({
-    type: 'COMPLETE_PLACE',
-    id
-});

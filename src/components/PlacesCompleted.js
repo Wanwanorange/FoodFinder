@@ -1,26 +1,23 @@
 import React, {Component} from 'react';
 import Place from "./Place";
-import { removePlace } from "../actions/place-actions";
-import selectPlaces from '../selectors/place-selector';
 
-import { connect } from 'react-redux';
+class PlacesCompleted extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            completedPlaces: [<Place name="Jenis Ice Cream" category="cafe"/>]
+        };
+    }
 
-export const PlacesCompleted = (props) => (
-    <div>
-        {props.places.map((place) =>
-            <Place {...place}
-                removePlace={props.removePlace}/>)}
-    </div>
-);
+    render() {
+        return (
+            <div>
+                <ul>
+                    {this.state.completedPlaces}
+                </ul>
+            </div>
+        );
+    }
+}
 
-const mapStateToProps = (state) => {
-    return {
-        places: selectPlaces(state.places, true)
-    };
-};
-
-const mapDispatchToProps = (dispatch) => ({
-    removePlace: (data) => dispatch(removePlace(data))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(PlacesCompleted);
+export default PlacesCompleted;

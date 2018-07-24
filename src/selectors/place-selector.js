@@ -1,4 +1,4 @@
 
-export default (places, completed) => {
-    return places.filter((place) =>  place.completed === completed);
+export default (places) => {
+    return places;
 };

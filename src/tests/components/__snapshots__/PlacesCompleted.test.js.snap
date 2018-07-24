@@ -4,24 +4,7 @@ exports[`should render PlacesCompleted correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
-    places={
-        Array [
-            Object {
-              "category": "meal delivery",
-              "completed": false,
-              "id": "1234",
-              "name": "Big Mamas",
-            },
-            Object {
-              "category": "cafe",
-              "completed": true,
-              "id": "2903",
-              "name": "Kanga Wanga",
-            },
-          ]
-    }
-/>,
+  Symbol(enzyme.__unrendered__): <PlacesCompleted />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -34,78 +17,23 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <ul>
         <Place
-          category="meal delivery"
-          completed={false}
-          id="1234"
-          name="Big Mamas"
-          removePlace={undefined}
-/>,
-        <Place
-          category="cafe"
-          completed={true}
-          id="2903"
-          name="Kanga Wanga"
-          removePlace={undefined}
-/>,
-      ],
+                category="cafe"
+                name="Jenis Ice Cream"
+        />
+</ul>,
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "category": "meal delivery",
-          "completed": false,
-          "id": "1234",
-          "name": "Big Mamas",
-          "removePlace": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "category": "cafe",
-          "completed": true,
-          "id": "2903",
-          "name": "Kanga Wanga",
-          "removePlace": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <Place
-            category="meal delivery"
-            completed={false}
-            id="1234"
-            name="Big Mamas"
-            removePlace={undefined}
-/>,
-          <Place
             category="cafe"
-            completed={true}
-            id="2903"
-            name="Kanga Wanga"
-            removePlace={undefined}
+            name="Jenis Ice Cream"
 />,
         ],
       },
@@ -116,32 +44,61 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "category": "meal delivery",
-            "completed": false,
-            "id": "1234",
-            "name": "Big Mamas",
-            "removePlace": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
             "category": "cafe",
-            "completed": true,
-            "id": "2903",
-            "name": "Kanga Wanga",
-            "removePlace": undefined,
+            "name": "Jenis Ice Cream",
           },
           "ref": null,
           "rendered": null,
           "type": [Function],
         },
       ],
+      "type": "ul",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <ul>
+          <Place
+                    category="cafe"
+                    name="Jenis Ice Cream"
+          />
+</ul>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Place
+              category="cafe"
+              name="Jenis Ice Cream"
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "category": "cafe",
+              "name": "Jenis Ice Cream",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "ul",
+      },
       "type": "div",
     },
   ],

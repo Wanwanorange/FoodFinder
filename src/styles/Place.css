@@ -3,28 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding-right: 20px;
-    padding-bottom: 10px;
-    border-bottom: grey dotted 1px;
 }
 
 .place button {
     height: 100%;
 }
-
-/* .placeCheck {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    width: 100%;
-}
-
-.placeCheck p {
-    margin-right: 10px;
-}
-
-.placeCheck button {
-    position: absolute;
-    height: 50%;
-    right: 10px;
-} */

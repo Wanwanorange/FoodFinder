@@ -5,7 +5,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Place
-    completePlace={[Function]}
     id="1234"
     removePlace={[Function]}
 />,
@@ -22,21 +21,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
-          className="placeCheck"
->
-          <p>
-                    , 
-          </p>
-          <button
-                    className="completeButton"
-                    onClick={[Function]}
-          >
-                    Been there!
-          </button>
-</div>,
+        <p>
+          , 
+</p>,
         <button
-          className="removeButton"
           id="1234"
           onClick={[Function]}
 >
@@ -53,54 +41,18 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <p>
-              , 
-</p>,
-            <button
-              className="completeButton"
-              onClick={[Function]}
->
-              Been there!
-</button>,
+            undefined,
+            ", ",
+            undefined,
           ],
-          "className": "placeCheck",
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                undefined,
-                ", ",
-                undefined,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              undefined,
-              ", ",
-              undefined,
-            ],
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Been there!",
-              "className": "completeButton",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Been there!",
-            "type": "button",
-          },
+          undefined,
+          ", ",
+          undefined,
         ],
-        "type": "div",
+        "type": "p",
       },
       Object {
         "instance": null,
@@ -108,7 +60,6 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "X",
-          "className": "removeButton",
           "id": "1234",
           "onClick": [Function],
         },
@@ -126,21 +77,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div
-            className="placeCheck"
->
-            <p>
-                        , 
-            </p>
-            <button
-                        className="completeButton"
-                        onClick={[Function]}
-            >
-                        Been there!
-            </button>
-</div>,
+          <p>
+            , 
+</p>,
           <button
-            className="removeButton"
             id="1234"
             onClick={[Function]}
 >
@@ -157,54 +97,18 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p>
-                , 
-</p>,
-              <button
-                className="completeButton"
-                onClick={[Function]}
->
-                Been there!
-</button>,
+              undefined,
+              ", ",
+              undefined,
             ],
-            "className": "placeCheck",
           },
           "ref": null,
           "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  undefined,
-                  ", ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                undefined,
-                ", ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Been there!",
-                "className": "completeButton",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "Been there!",
-              "type": "button",
-            },
+            undefined,
+            ", ",
+            undefined,
           ],
-          "type": "div",
+          "type": "p",
         },
         Object {
           "instance": null,
@@ -212,7 +116,6 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "X",
-            "className": "removeButton",
             "id": "1234",
             "onClick": [Function],
           },
