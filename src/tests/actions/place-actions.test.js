@@ -1,4 +1,4 @@
-import { addPlace, removePlace } from '../../actions/place-actions';
+import { addPlace, removePlace, completePlace } from '../../actions/place-actions';
 import places from '../testData/places';
 
 test('should setup add place with provided values', () => {
@@ -14,5 +14,13 @@ test('should setup remove place', () => {
     expect(action).toEqual({
         type: 'REMOVE_PLACE',
         id: 'jo765'
+    });
+});
+
+test('should setup complete place', () => {
+    const action = completePlace({ id: '98dje' });
+    expect(action).toEqual({
+        type: 'COMPLETE_PLACE',
+        id: '98dje'
     });
 });
