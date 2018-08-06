@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
-import {addPlace} from "../actions/place-actions";
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import PlacesAutocomplete from 'react-places-autocomplete';
+import { addPlace } from "../actions/place-actions";
+import { connect } from 'react-redux';
 import selectPlaces from '../selectors/place-selector';
+import '../styles/AddPlace.css';
 
 export class AddPlace extends Component {
     state = {
@@ -21,10 +23,10 @@ export class AddPlace extends Component {
             return 'This place is already on your list';
         }
         this.props.addPlace({
-            id: this.state.id,
-            name: this.state.name,
-            category: this.state.category,
-            completed: this.state.completed
+            id: input.id,
+            name,
+            category: input.category,
+            completed: input.completed
         });
         return '';
     };
@@ -33,7 +35,7 @@ export class AddPlace extends Component {
         e.preventDefault();
         const error = this.addPlaceIfNoErrors(this.state);
 
-        this.setState({error});
+        this.setState({ error });
 
         if (!error) {
             document.getElementsByName('name').value = '';
@@ -41,7 +43,7 @@ export class AddPlace extends Component {
     };
 
     onNameChange = (e) => {
-        const name = e.target.value;
+        const name = e;
         this.setState(() => ({ id: name, name }));
     };
 
@@ -54,9 +56,47 @@ export class AddPlace extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit} >
-                    <input type="text" name="name" onChange={this.onNameChange}/>
+                    <PlacesAutocomplete
+                        value={this.state.name}
+                        onChange={this.onNameChange}>
+                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                            <div>
+                                <input
+                                    {...getInputProps({
+                                        placeholder: 'Search Places ...',
+                                        className: 'location-search-input',
+                                    })}
+                                />
+                                {suggestions.length > 0 && (
+                                    <div className="autocomplete-dropdown-container">
+                                        {loading && <div>Loading...</div>}
+                                        {suggestions.map(suggestion => {
+                                            const className = suggestion.active
+                                                ? 'suggestion-item--active'
+                                                : 'suggestion-item';
+                                            // inline style for demonstration purpose
+                                            const style = suggestion.active
+                                                ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+                                                : { backgroundColor: '#ffffff', cursor: 'pointer' };
+                                            return (
+                                                <div
+                                                    {...getSuggestionItemProps(suggestion, {
+                                                        className,
+                                                        style,
+                                                    })}
+                                                >
+                                                    <span>{suggestion.description}</span>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </PlacesAutocomplete>
+
                     <select name="category"
-                            onChange={this.onCategoryChange}>
+                        onChange={this.onCategoryChange}>
                         <option value="bakery">Bakery</option>
                         <option value="cafe">Cafe</option>
                         <option value="meal delivery">Meal delivery</option>
@@ -73,7 +113,7 @@ export class AddPlace extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        places: selectPlaces(state.places)
+        places: selectPlaces(state.places, false)
     };
 };
 

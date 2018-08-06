@@ -1,0 +1,14 @@
+#window {
+  display: flex;
+  justify-content: space-between;
+}
+
+#map {
+  padding: 0px 10px;
+  width: 100%;
+}
+
+#search-form {
+  width: 100%;
+  margin-left: 10px;
+}

@@ -1,43 +1,20 @@
-import http from 'http';
-import express from 'express';
-
+const path = require('path');
+const express = require('express');
 const app = express();
+const publicPath = path.join(__dirname, '..', 'public');
+const port = process.env.PORT || 3000;
 
-function normalisePort(val) {
-  const port = parseInt(val, 10);
+app.use(express.static(publicPath));
 
-  if (Number.isNaN(port)) {
-    return val;
-  }
+app.get('/completed', (req, res) => {
+  res.send({ express: 'Hello From Express' });
+});
 
-  if (port >= 0) {
-    return port;
-  }
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 
-  return false;
-}
+app.listen(port, () => {
+  console.log('Serves up at port %s!', port);
+});
 
-const port = normalisePort(process.env.PORT || 3000);
-app.set('port', port);
-
-const server = http.createServer(app);
-let availablePort = port;
-
-function startServer(serverPort) {
-  server.listen(serverPort);
-}
-
-function onListening() {
-  const addr = server.address();
-  const bind = `${
-    typeof addr === 'string' ? 'pipe' : 'port'
-  } ${
-    typeof addr === 'string' ? addr : addr.port
-  }`;
-  console.log(`Server is listening on ${bind}`);
-  console.log(`Visit: http://localhost:${addr.port}`);
-}
-
-server.on('listening', onListening);
-
-startServer(availablePort);
