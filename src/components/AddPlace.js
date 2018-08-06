@@ -95,7 +95,7 @@ export class AddPlace extends Component {
                         )}
                     </PlacesAutocomplete>
 
-                    <select name="category"
+                    <select className="dropdown spacing" name="category"
                         onChange={this.onCategoryChange}>
                         <option value="bakery">Bakery</option>
                         <option value="cafe">Cafe</option>
@@ -103,7 +103,7 @@ export class AddPlace extends Component {
                         <option value="meal takeaway">Meal Takeaway</option>
                         <option value="restaurant">Restaurant</option>
                     </select>
-                    <button>Add Place</button>
+                    <button className="spacing">Add Place</button>
                 </form>
                 {this.state.error && <p className="error">{this.state.error}</p>}
             </div>

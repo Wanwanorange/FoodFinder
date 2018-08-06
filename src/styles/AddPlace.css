@@ -6,3 +6,11 @@
 .location-search-input {
   width: 100%;
 }
+
+.dropdown {
+  margin-right: 10px;
+}
+
+.spacing {
+  margin-top: 5px;
+}
