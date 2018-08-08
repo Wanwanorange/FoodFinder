@@ -2,7 +2,6 @@ import React from 'react';
 import Place from './Place';
 import { removePlace, completePlace } from "../actions/place-actions";
 import selectPlaces from '../selectors/place-selector';
-
 import { connect } from 'react-redux';
 
 export const PlacesList = (props) => (

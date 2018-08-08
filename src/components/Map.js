@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
- 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
- 
+import { selectAll } from '../selectors/place-selector';
+import { connect } from 'react-redux';
+import marker from '../img/marker.png';
+import completedmarker from '../img/completedmarker.png';
+
+const AnyReactComponent = ({ completed }) => (
+  <div>{completed ? <img src={completedmarker}/> : <img src={marker}/>}</div>
+);
+
 class SimpleMap extends Component {
   static defaultProps = {
     center: {
-      lat: 39.5,
-      lng: -97.5
+      lat: 44.5,
+      lng: -85.5
     },
-    zoom: 0
+    zoom: 5
   };
 
   render() {
@@ -20,15 +26,23 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text={'kiev'}
-          />
+          {this.props.places.map((place) =>
+            <AnyReactComponent 
+            lat={place.latitude} 
+            lng={place.longitude} 
+            text={place.name}
+            completed={place.completed}
+            />)}
         </GoogleMapReact>
       </div>
     );
   }
 }
- 
-export default SimpleMap;
+
+const mapStateToProps = (state) => {
+  return {
+    places: selectAll(state.places)
+  };
+};
+
+export default connect(mapStateToProps)(SimpleMap);
