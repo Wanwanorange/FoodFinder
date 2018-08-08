@@ -15,7 +15,8 @@ class Place extends Component {
         return (
             <div className="place">
                 <div className="placeCheck">
-                    <p>{this.props.name}, {this.props.category}</p>
+                    <p className="placeDetails">{this.props.name}</p>
+                    <p className="placeDetails">{this.props.category}</p>
                     {!this.props.completed &&
                         <button className="completeButton"
                             onClick={this.completePlace}>Been there!</button>}

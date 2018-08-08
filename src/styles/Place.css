@@ -2,9 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 5px 10px 5px 10px;
+    border-bottom: solid 1px lightgrey;
 }
 
 .place button {
     height: 100%;
+}
+
+.placeDetails {
+    margin: 5px;
 }
