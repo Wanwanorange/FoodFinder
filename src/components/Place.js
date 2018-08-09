@@ -14,14 +14,14 @@ class Place extends Component {
     render() {
         return (
             <div className="place">
-                <div className="placeCheck">
-                    <p className="placeDetails">{this.props.name}</p>
-                    <p className="placeDetails">{this.props.category}</p>
+                <div className="place-check">
+                    <p className="place-details">{this.props.name}</p>
+                    <p className="place-details">{this.props.category}</p>
                     {!this.props.completed &&
-                        <button className="completeButton"
+                        <button className="complete-button"
                             onClick={this.completePlace}>Been there!</button>}
                 </div>
-                <button className="removeButton"
+                <button className="remove-button"
                     onClick={this.removePlace} id={this.props.id}>X</button>
             </div>
         );

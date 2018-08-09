@@ -9,7 +9,7 @@ const AnyReactComponent = ({ completed }) => (
   <div>{completed ? <img src={completedmarker}/> : <img src={marker}/>}</div>
 );
 
-class SimpleMap extends Component {
+export class SimpleMap extends Component {
   static defaultProps = {
     center: {
       lat: 44.5,

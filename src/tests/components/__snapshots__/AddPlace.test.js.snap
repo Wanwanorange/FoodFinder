@@ -2,7 +2,6 @@
 
 exports[`should render AddPlace correctly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AddPlace
     addPlace={[Function]}
@@ -21,14 +20,22 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <form
+          className="entryform"
           onSubmit={[Function]}
 >
-          <input
-                    name="name"
+          <PlacesAutocomplete
+                    debounce={200}
+                    highlightFirstSuggestion={false}
                     onChange={[Function]}
-                    type="text"
-          />
+                    onError={[Function]}
+                    searchOptions={Object {}}
+                    shouldFetchSuggestions={true}
+                    value=""
+          >
+                    [Function]
+          </PlacesAutocomplete>
           <select
+                    className="spacing"
                     name="category"
                     onChange={[Function]}
           >
@@ -45,7 +52,7 @@ ShallowWrapper {
                     <option
                               value="meal delivery"
                     >
-                              Meal delivery
+                              Meal Delivery
                     </option>
                     <option
                               value="meal takeaway"
@@ -58,7 +65,9 @@ ShallowWrapper {
                               Restaurant
                     </option>
           </select>
-          <button>
+          <button
+                    className="spacing add-place"
+          >
                     Add Place
           </button>
 </form>,
@@ -73,12 +82,19 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <input
-              name="name"
+            <PlacesAutocomplete
+              debounce={200}
+              highlightFirstSuggestion={false}
               onChange={[Function]}
-              type="text"
-/>,
+              onError={[Function]}
+              searchOptions={Object {}}
+              shouldFetchSuggestions={true}
+              value=""
+>
+              [Function]
+</PlacesAutocomplete>,
             <select
+              className="spacing"
               name="category"
               onChange={[Function]}
 >
@@ -95,7 +111,7 @@ ShallowWrapper {
               <option
                             value="meal delivery"
               >
-                            Meal delivery
+                            Meal Delivery
               </option>
               <option
                             value="meal takeaway"
@@ -108,10 +124,13 @@ ShallowWrapper {
                             Restaurant
               </option>
 </select>,
-            <button>
+            <button
+              className="spacing add-place"
+>
               Add Place
 </button>,
           ],
+          "className": "entryform",
           "onSubmit": [Function],
         },
         "ref": null,
@@ -119,15 +138,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
-              "name": "name",
+              "children": [Function],
+              "debounce": 200,
+              "highlightFirstSuggestion": false,
               "onChange": [Function],
-              "type": "text",
+              "onError": [Function],
+              "searchOptions": Object {},
+              "shouldFetchSuggestions": true,
+              "value": "",
             },
             "ref": null,
-            "rendered": null,
-            "type": "input",
+            "rendered": [Function],
+            "type": [Function],
           },
           Object {
             "instance": null,
@@ -148,7 +172,7 @@ ShallowWrapper {
                 <option
                   value="meal delivery"
 >
-                  Meal delivery
+                  Meal Delivery
 </option>,
                 <option
                   value="meal takeaway"
@@ -161,6 +185,7 @@ ShallowWrapper {
                   Restaurant
 </option>,
               ],
+              "className": "spacing",
               "name": "category",
               "onChange": [Function],
             },
@@ -195,11 +220,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Meal delivery",
+                  "children": "Meal Delivery",
                   "value": "meal delivery",
                 },
                 "ref": null,
-                "rendered": "Meal delivery",
+                "rendered": "Meal Delivery",
                 "type": "option",
               },
               Object {
@@ -235,6 +260,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Add Place",
+              "className": "spacing add-place",
             },
             "ref": null,
             "rendered": "Add Place",
@@ -255,14 +281,22 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <form
+            className="entryform"
             onSubmit={[Function]}
 >
-            <input
-                        name="name"
+            <PlacesAutocomplete
+                        debounce={200}
+                        highlightFirstSuggestion={false}
                         onChange={[Function]}
-                        type="text"
-            />
+                        onError={[Function]}
+                        searchOptions={Object {}}
+                        shouldFetchSuggestions={true}
+                        value=""
+            >
+                        [Function]
+            </PlacesAutocomplete>
             <select
+                        className="spacing"
                         name="category"
                         onChange={[Function]}
             >
@@ -279,7 +313,7 @@ ShallowWrapper {
                         <option
                                     value="meal delivery"
                         >
-                                    Meal delivery
+                                    Meal Delivery
                         </option>
                         <option
                                     value="meal takeaway"
@@ -292,7 +326,9 @@ ShallowWrapper {
                                     Restaurant
                         </option>
             </select>
-            <button>
+            <button
+                        className="spacing add-place"
+            >
                         Add Place
             </button>
 </form>,
@@ -307,12 +343,19 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <input
-                name="name"
+              <PlacesAutocomplete
+                debounce={200}
+                highlightFirstSuggestion={false}
                 onChange={[Function]}
-                type="text"
-/>,
+                onError={[Function]}
+                searchOptions={Object {}}
+                shouldFetchSuggestions={true}
+                value=""
+>
+                [Function]
+</PlacesAutocomplete>,
               <select
+                className="spacing"
                 name="category"
                 onChange={[Function]}
 >
@@ -329,7 +372,7 @@ ShallowWrapper {
                 <option
                                 value="meal delivery"
                 >
-                                Meal delivery
+                                Meal Delivery
                 </option>
                 <option
                                 value="meal takeaway"
@@ -342,10 +385,13 @@ ShallowWrapper {
                                 Restaurant
                 </option>
 </select>,
-              <button>
+              <button
+                className="spacing add-place"
+>
                 Add Place
 </button>,
             ],
+            "className": "entryform",
             "onSubmit": [Function],
           },
           "ref": null,
@@ -353,15 +399,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
-                "name": "name",
+                "children": [Function],
+                "debounce": 200,
+                "highlightFirstSuggestion": false,
                 "onChange": [Function],
-                "type": "text",
+                "onError": [Function],
+                "searchOptions": Object {},
+                "shouldFetchSuggestions": true,
+                "value": "",
               },
               "ref": null,
-              "rendered": null,
-              "type": "input",
+              "rendered": [Function],
+              "type": [Function],
             },
             Object {
               "instance": null,
@@ -382,7 +433,7 @@ ShallowWrapper {
                   <option
                     value="meal delivery"
 >
-                    Meal delivery
+                    Meal Delivery
 </option>,
                   <option
                     value="meal takeaway"
@@ -395,6 +446,7 @@ ShallowWrapper {
                     Restaurant
 </option>,
                 ],
+                "className": "spacing",
                 "name": "category",
                 "onChange": [Function],
               },
@@ -429,11 +481,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Meal delivery",
+                    "children": "Meal Delivery",
                     "value": "meal delivery",
                   },
                   "ref": null,
-                  "rendered": "Meal delivery",
+                  "rendered": "Meal Delivery",
                   "type": "option",
                 },
                 Object {
@@ -469,6 +521,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Add Place",
+                "className": "spacing add-place",
               },
               "ref": null,
               "rendered": "Add Place",
@@ -486,8 +539,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;

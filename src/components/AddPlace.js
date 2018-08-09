@@ -16,7 +16,7 @@ export class AddPlace extends Component {
         longitude: null
     };
 
-    addPlaceIfNoErrors = (input) => {
+    addPlaceIfNoErrors = (input = {}) => {
         const name = input.name;
         if (!name) {
             return 'Please enter place name';
@@ -94,7 +94,7 @@ export class AddPlace extends Component {
                                     />
                                     {this.state.name.length > 0 && (
                                         <button
-                                            className="Demo__clear-button"
+                                            className="demo__clear-button"
                                             onClick={this.onCloseClick}
                                         >
                                             x

@@ -19,11 +19,11 @@ test('should render Place correctly', () => {
 });
 
 test('should remove place when prompted', () => {
-    wrapper.find('.removeButton').simulate('click');
+    wrapper.find('.remove-button').simulate('click');
     expect(removePlace).toHaveBeenLastCalledWith({ id: '1234' });
 });
 
 test('should complete place when prompted', () => {
-    wrapper.find('.completeButton').simulate('click');
+    wrapper.find('.complete-button').simulate('click');
     expect(completePlace).toHaveBeenCalledWith({ id: '1234' });
 });

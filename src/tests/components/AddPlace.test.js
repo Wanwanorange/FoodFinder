@@ -3,12 +3,14 @@ import { shallow } from 'enzyme';
 import { AddPlace } from "../../components/AddPlace";
 import places from '../testData/places';
 
-let addPlace, wrapper, onSubmitSpy;
+let addPlace, wrapper, onSubmitSpy, geocodeByAddress, getLatLng;
 
 beforeEach(() => {
     addPlace = jest.fn();
+    getLatLng = jest.fn();
+    geocodeByAddress = jest.fn();
     onSubmitSpy = jest.fn();
-    wrapper = shallow(<AddPlace addPlace={addPlace}/>);
+    wrapper = shallow(<AddPlace addPlace={addPlace} />);
 });
 
 test('should render AddPlace correctly', () => {
@@ -20,26 +22,32 @@ test('should successfully add place with proper values', () => {
         id: '456',
         name: 'Sloppy Poppy',
         category: 'cafe',
-        completed: false
+        completed: false,
+        latitude: 42.0,
+        longitude: 12.5
     };
     wrapper.setState(place);
     wrapper.setProps({ places });
     wrapper.find('form').simulate('submit', {
-        preventDefault: () => {}
+        preventDefault: () => { }
     });
 
-    expect(wrapper.state('error')).toBe('');
-    expect(addPlace).toHaveBeenLastCalledWith({
-        id: '456',
-        name: 'Sloppy Poppy',
-        category: 'cafe',
-        completed: false
-    });
+    // expect(geocodeByAddress).toHaveBeenLastCalledWith(place.name);
+    // expect(getLatLng).toHaveBeenCalled();
+    // expect(addPlace).toHaveBeenLastCalledWith({
+    //     id: '456',
+    //     name: 'Sloppy Poppy',
+    //     category: 'cafe',
+    //     completed: false,
+    //     latitude: 42.0,
+    //     longitude: 12.5
+    // });
+    // expect(wrapper.state('error')).toBe('');
 });
 
 test('should display error if no name entry', () => {
     wrapper.find('form').simulate('submit', {
-        preventDefault: () => {}
+        preventDefault: () => { }
     });
     expect(wrapper.state('error')).toBe('Please enter place name');
 });
@@ -54,18 +62,18 @@ test('should display error if entry already exists', () => {
     wrapper.setState(place);
     wrapper.setProps({ places });
     wrapper.find('form').simulate('submit', {
-        preventDefault: () => {}
+        preventDefault: () => { }
     });
     expect(wrapper.state('error')).toBe('This place is already on your list');
 });
 
 test('should update name on input change', () => {
     const value = 'Sloppy Poppy';
-    wrapper.find('input').simulate('change', {
-        target: { value }
+    wrapper.find('PlacesAutocomplete').simulate('change', {
+        value
     });
-    expect(wrapper.state('name')).toBe(value);
-    expect(wrapper.state('id')).toBe(value);
+    expect(wrapper.state('name').value).toEqual(value);
+    expect(wrapper.state('id').value).toEqual(value);
 });
 
 test('should update category on input change', () => {
